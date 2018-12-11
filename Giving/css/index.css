@@ -1,0 +1,214 @@
+/*通用样式*/
+@charset "UTF-8"
+/*利用rem+vw方案解决移动适配*/
+/*html {*/
+  /*font-size:16px;*/
+/*}*/
+/*@media screen and (min-width: 375px){*/
+/*@media screen and (min-width: 375px){*/
+/*@media screen and (min-width: 375px){*/
+  /*html {*/
+    /*font-size: calc(100% + 2 * (100vw - 375px) / 39);*/
+  /*}*/
+/*}*/
+/*@media screen and (min-width: 414px){*/
+  /*html {*/
+    /*font-size: calc(100% + 4 * (100vw - 414px) / 586);*/
+  /*}*/
+/*}*/
+/*@media screen and (min-width: 600px){*/
+  /*html {*/
+    /*font-size: calc(125% + 4 * (100vw - 600px) / 400);*/
+  /*}*/
+/*}*/
+/*@media screen and (min-width: 1000px){*/
+  /*html {*/
+    /*font-size: calc(137.5% + 6 * (100vw - 1000px) / 1000);*/
+  /*}*/
+/*}*/
+/*利用rem+vm方案解决移动适配*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+} 
+body,ul,li,p {margin: 0; padding: 0;}
+ul{list-style-type: none;}/*初始化*/
+a ,a:active {
+  text-decoration: none;
+  color: black;
+  -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+  -webkit-user-select: none;
+  -moz-user-focus: none;
+  -moz-user-select: none;
+}
+input {
+  -webkit-appearance: none; /*防止移动端按钮 圆角过圆*/
+}
+/*initialize*/
+
+body {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.app {
+  display: flex;
+  top: 0;
+  flex-direction: column;
+  align-items: center;
+}
+/*header*/
+.header {
+  background-color: white;
+  width: 100%;
+  height: 16.257vw;
+  position: fixed;
+  z-index: 5;
+  padding-left: 6.5vw;
+  overflow: hidden;
+}
+.header p {
+  font-family: PingFangBold;
+  font-size:  9.6vw;
+  font-weight: bold;
+  padding-top: 3.2vw;
+  position: absolute;
+  margin-left: 4.4vw;
+}
+.blur-content-header {
+  position: absolute;
+  z-index: -2;
+  top: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: white;
+  width: 100%;
+  margin-left: -6vw;
+
+}
+/*search*/
+.search {
+  width: 89.6vw;
+  height: 11.2vw;
+  margin-top: 17.5vw;
+  margin-bottom: 3.5vw;
+  display: flex;
+  justify-content: center;
+}
+#search-bg {
+  width: 89.6vw;
+  position: absolute;
+}
+input::-webkit-input-placeholder{
+  color:white;
+
+}
+input {
+
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  /*z-index: 1;*/
+  border: 0;
+  font-family: Papyrus;
+  font-size: 4vw;
+  color: white;
+  height: 9.06vw;
+  width: 70vw;
+  background: url("img/search-bg@3x.png");
+  margin-top: 2.3vw;
+  margin-left: 7vw;
+}
+input:focus {
+  outline: none;
+}
+
+/*swiper*/
+#banner {
+  width: 89.6vw;
+  height: 42vw;
+}
+
+/*banner*/
+
+/*card*/
+
+.card-item {
+  width: 89.6vw;
+  height: 40vw;
+  display: flex;
+  flex-direction: column;
+  /*box-shadow:  0 4px 8px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);*/
+  border-radius: 25px;
+  margin-bottom: 7.8vw;
+}
+.card-item img {
+  height: 46.13vw;/*40vw*/
+  width: 100%;
+}
+.desc {
+  height: 12.255vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 17px;
+}
+
+/*foot*/
+footer {
+  border-top:1px solid #8888;
+  border-bottom: 10px;
+  height: 13.34vw;
+  width: 100%;
+  bottom: 0;
+  position: fixed;
+  /*justify-content: space-around;*/
+  /*display: flex;*/
+  /*align-items: center;*/
+  overflow: hidden;
+
+}
+.footer-bar {
+  border-top: 1px solid #888888;
+  border-bottom: 1px;
+  height: 13.34vw;
+  width: 100%;
+  bottom: 0;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  z-index: 1;
+  position: absolute;
+}
+#foot-bg {
+  z-index: -1;
+  position: fixed;
+  height: 13.34vw;
+  width: 100%;
+  opacity: 0.8;
+  overflow: hidden;
+}
+.blur-content-footer {
+  position: absolute;
+  z-index: -1;
+  width: 100%;
+  bottom: 0;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: white;
+}
+#huodong,#wode,#quanzi {
+  width: 8vw;
+  height: 10.6722vw;
+}
+footer div img {
+  width: 100%;
+  height: 100%;
+}

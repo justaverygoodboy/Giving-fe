@@ -1,0 +1,12 @@
+@font-face {
+	font-family:PingFangBold;
+	src: url('../font/PINGFANG-BOLD-1.TTF');
+}
+@font-face {
+	font-family:PingFangMedium;
+	src: url('../font/PINGFANG-MEDIUM-1.TTF');
+}
+@font-face {
+	font-family:PingFangHeiti;
+	src: url('../font/PINGFANGHEITI-JIXI-JIAN-1.TTF');
+}

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/> <!--完美视图，不可缩放 viewport-fit我也不知道-->
+  <meta name="format-datection" content="telephone=no,email=no"/><!--默认试别不了电话邮件--><!--如果要链接电话或邮箱 在a标签中href="tel:110"/href="mailto:1111@qq.com"-->
+  <meta name="apple-mobile-web-app-capable" content="yes"><!-- 这个我也不知道... -->
+  <meta name="apple-mobile-web-app-status-bar-style" content="white"><!-- 设置手机导航栏颜色 -->
+  <link rel="icon" type="image/x-icon" href="img/favicon.ico"/><!--favicon load-->
+  <title>活动首页</title>
+  <script src="lib/jquery-3.3.1.js"></script>
+  <script src="js/banner.js"></script>
+  <script src="js/index.js"></script>
+  <link rel="stylesheet" href="css/index.css"/>
+  <link rel="stylesheet" type="text/css" href="css/font.css">
+
+<body>
+  <div class="header">
+    <p>活动</p>
+  </div>
+  <div class="search">
+    <img id="search-bg" src="./img/search-bg@3x.png"/>
+    <input type="text" placeholder="请搜索活动">
+  </div>
+<div class="app">
+  <div id="banner">
+
+  </div>
+  <section class="cards">
+    <div class="card-item">
+      <img src="img/item(3).png"/>
+      <!--<div class="desc">-->
+        <!--<div class="title">-->
+          <!--青年志愿者协会捐书活动-->
+        <!--</div>-->
+        <!--<div class="sub">-->
+          <!--青志协-->
+        <!--</div>-->
+      <!--</div>-->
+    </div>
+    <div class="card-item">
+      <img src="img/item(3).png"/>
+      <!--<div class="desc">-->
+      <!--<div class="title">-->
+      <!--青年志愿者协会捐书活动-->
+      <!--</div>-->
+      <!--<div class="sub">-->
+      <!--青志协-->
+      <!--</div>-->
+      <!--</div>-->
+    </div>
+    <div class="card-item">
+      <img src="img/item(3).png"/>
+      <!--<div class="desc">-->
+      <!--<div class="title">-->
+      <!--青年志愿者协会捐书活动-->
+      <!--</div>-->
+      <!--<div class="sub">-->
+      <!--青志协-->
+      <!--</div>-->
+      <!--</div>-->
+    </div>
+    <div class="card-item">
+      <img src="img/item(3).png"/>
+      <!--<div class="desc">-->
+      <!--<div class="title">-->
+      <!--青年志愿者协会捐书活动-->
+      <!--</div>-->
+      <!--<div class="sub">-->
+      <!--青志协-->
+      <!--</div>-->
+      <!--</div>-->
+    </div>
+  </section>
+</div>
+
+
+  <footer>
+    <div class="footer-bar">  
+    <img id="foot-bg" src="./img/foot@3x.png" alt="">
+    <div id="huodong">
+      <img src="img/hudong-active.png"/></div>
+    <div id="quanzi">
+      <img src="img/quanzi.png"/></div>
+    <div id="wode">
+      <img src="img/my@3x.png"/></div>
+    </div>
+  </footer>
+
+ <script type="text/javascript">
+  $("#banner").scrollBanner({
+    images : [
+      {src : "./img/banner-pic@3x.png",title : "banner1",href :"http://www.baidu.com"},
+      {src : "./img/banner-pic@3x.png",title : "banner2",href :"http://www.sina.com.cn"},
+      {src : "./img/banner-pic@3x.png",title : "banner3",href :"http://www.qq.com"}
+    ],
+    scrollTime : 1800,
+    bannerHeight : "49vw",
+    iconColor : "grey",
+    iconHoverColor : "white",
+    iconPosition : "center"   
+    })
+  </script>
+</body>
+
+</html>
+

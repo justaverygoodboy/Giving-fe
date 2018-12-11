@@ -1,0 +1,62 @@
+/*通用样式*/
+@charset "UTF-8"
+/*!*利用rem+vw方案解决移动适配*!*/
+/*html {*/
+  /*font-size:16px;*/
+/*}*/
+/*@media screen and (min-width: 375px){*/
+  /*html {*/
+    /*font-size: calc(100% + 2 * (100vw - 375px) / 39);*/
+  /*}*/
+/*}*/
+/*@media screen and (min-width: 414px){*/
+  /*html {*/
+    /*font-size: calc(100% + 4 * (100vw - 414px) / 586);*/
+  /*}*/
+/*}*/
+/*@media screen and (min-width: 600px){*/
+  /*html {*/
+    /*font-size: calc(125% + 4 * (100vw - 600px) / 400);*/
+  /*}*/
+/*}*/
+/*@media screen and (min-width: 1000px){*/
+  /*html {*/
+    /*font-size: calc(137.5% + 6 * (100vw - 1000px) / 1000);*/
+  /*}*/
+/*}*/
+/*!*利用rem+vm方案解决移动适配*!*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body,ul,li,p {margin: 0; padding: 0;}
+ul{list-style-type: none;}/*初始化*/
+a ,a:active {
+  text-decoration: none;
+  color: black;
+}
+input {
+  -webkit-appearance: none; /*防止移动端按钮 圆角过圆*/
+}
+body {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+header {
+  width: 100%;
+  top: 0;
+  position: fixed;
+  border-bottom: solid 5px black ;
+}
+.desc-card {
+  display: flex;
+
+}
+.title-brief {
+  display: flex;
+
+}
