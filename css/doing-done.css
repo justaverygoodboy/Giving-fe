@@ -1,0 +1,27 @@
+body {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  height: 13.06vw;
+  align-items: center;
+  border-bottom: solid 1px lightgray;
+  background: #ffffff;
+}
+.card-item {
+  width: 89.6vw;
+  height: 40vw;
+  display: flex;
+  flex-direction: column;
+  border-radius: 25px;
+  margin-bottom: 7.8vw;
+}
+.card-item img {
+  height: 46.13vw;/*40vw*/
+  width: 100%;
+}

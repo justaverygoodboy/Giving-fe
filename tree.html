@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE-edge,chrome=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover"/>
+  <meta name="format-datection" content="telephone=no,email=no"/>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="white">
+  <title>小树苗</title>
+  <script src="lib/jquery-3.3.1.js"></script>
+  <link rel="stylesheet" type="text/css" href="css/font.css">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      background: url("./img/tree-grow.png");
+      background-position: 0 92.5vh;
+      background-size: cover;
+    }
+    header {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      height: 13.06vw;
+      align-items: center;
+      border-bottom: solid 1px lightgray;
+      background: #ffffff;
+    }
+    .back {
+      font-size: 5.33vw;
+      font-family: PingFangBold;
+      display: flex;
+      color: rgb(112,112,112);
+      align-items: center;
+    }
+
+    .back img {
+      height: 6.4vw;
+      width: 4vw;
+      margin-right: 1vw;
+    }
+    .title {
+      font-size: 5vw;
+      font-family: PingFangBold;
+      width: 30vw;
+      margin-left: 8vw;
+      margin-right: 10vw;
+      position: center;
+    }
+    .share {
+      height: 7vw;
+      width: 6.5vw;
+    }
+    .share img {
+      width: 100%;
+      height: 100%;
+    }
+    .box {
+      width: 100vw;
+      height: 84.5vh;
+    }
+    .box img {
+      width: 100%;
+      height: 100%;
+    }
+    .energy-container {
+      width: 66.13vw;
+      height: 12vw;
+      position: absolute;
+      bottom: 10vh;
+      right: 18vw;
+    }
+    .energy-container img {
+      width: 100%;
+      height: 100%;
+    }
+    .energy-container p {
+      font-family: PingFangMedium;
+      color: white;
+      position: absolute;
+      right: 16vw;
+      bottom: -1vw;
+    }
+    footer {
+      margin: 0;
+      padding: 0;
+      border-top:1px solid rgb(198,208,207);
+      border-bottom: 10px;
+      height: 13.34vw;
+      width: 100%;
+      bottom: 0;
+      position: fixed;
+      overflow: hidden;
+      background: white;
+    }
+    .footer-bar {
+      border-bottom: 1px;
+      height: 13.34vw;
+      width: 100%;
+      bottom: 0;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      z-index: 1;
+      position: absolute;
+    }
+    #huodong,#wode,#quanzi {
+      width: 8vw;
+      height: 10.6722vw;
+    }
+    footer div img {
+      width: 100%;
+      height: 100%;
+    }
+    @keyframes grow {
+      0% {
+        background: url("./img/tree-grow.png");
+        background-position: 0 92.5vh;
+        background-size: cover;
+      }
+      25% {
+        background: url("./img/tree-grow2.jpg");
+        background-position: 0 92.5vh;
+        background-size: cover;
+      }
+      75% {
+        background: url("./img/tree-grow3.jpg");
+        background-position: 0 92.5vh;
+        background-size: cover;
+      }
+      100% {
+        background: url("./img/tree-grow4.jpg");
+        background-position: 0 92.5vh;
+        background-size: cover;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<header>
+  <div class="back">
+    <img src="./img/fanhui@2x.png" alt="">
+    返回
+  </div>
+  <div class="title">
+    我的小树苗
+  </div>
+  <div class="share">
+    <img src="./img/share@3x.png">
+  </div>
+</header>
+
+<div class="box">
+  <div class="energy-container">
+    <p>你现在有<span id="num">5</span>点阳光哦</p>
+    <img id="energy" src="./img/energy.png" alt="">
+  </div>
+</div>
+
+<footer>
+  <div class="footer-bar">
+    <div id="huodong">
+      <img src="img/huodong@2x.png"/></div>
+    <div id="quanzi">
+      <img src="img/quanzi@2x.png"/></div>
+    <div id="wode">
+      <img src="img/my-active@2x.png"/></div>
+  </div>
+</footer>
+<body>
+
+<script>
+  $('#huodong').click(function () {
+    location.replace("index.html")
+  })
+  $('#quanzi').click(function () {
+    location.replace("quanzi.html")
+  })
+  $('.back').click(function () {
+    location.replace("mine.html")
+  })
+  $('.energy-container').click(function () {
+    $('#num').html('50')
+    $('.energy-container p').css({right:'15vw'})
+    $('body').css({animation:'grow 4s forwards'})
+  })
+</script>
+</body>
+</html>
