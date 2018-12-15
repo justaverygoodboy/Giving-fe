@@ -1,4 +1,4 @@
 # Hackweek-FrontEnd-Part
 ##in fact,
-###it's not a integrated,
+###it's not an integrated,
 ###we'll see in two days
