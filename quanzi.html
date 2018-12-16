@@ -13,6 +13,27 @@
   <link rel="stylesheet" type="text/css" href="css/font.css">
   <style>
 
+    #test {
+      position: absolute;
+      width: 60vw;
+      height: 33vw;
+      top: 40vw;
+      left: 95vw;
+    }
+    .quanzi {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin-top: 5vw;
+    }
+    .swiper {
+      margin-bottom: 5vw;
+
+    }
+    .swiper img {
+      width: 77.33vw;
+      height: 44.26vw;
+    }
     comment-container {
       width: 80vw;
     }
@@ -20,6 +41,8 @@
       width: 100%;
       height: 100%;
     }
+
+
   </style>
 <body>
   <div class="header">
@@ -32,26 +55,14 @@
 
   <div class="quanzi">
     <div class="swiper">
+      <img src="./img/laorenyuhai@2x.png" alt="">
+      <img id="test" src="./img/jinshequ@2x.png" alt="">
     </div>
 
     <div class="comment-container">
       <img id="comment" src="./img/comment@2x.png" alt="">
     </div>
   </div>
-  <!--<div class="floor">-->
-    <!--<div class="title">-->
-      <!--<div id="name">老人儿童</div>-->
-      <!--<div id="star"></div>-->
-    <!--</div>-->
-
-    <!--<div id="floor-1">-->
-
-    <!--</div>-->
-    <!--<div id="floor-2"></div>-->
-    <!--<div id="floor-3"></div>-->
-    <!--&lt;!&ndash;试着用js append&ndash;&gt;-->
-  <!--</div>-->
-<!--</div>-->
 
 <footer>
   <div class="footer-bar">
@@ -66,6 +77,9 @@
 </footer>
 
   <script>
+    $(document.body).css({
+      "overflow-x":"hidden",
+    });
   $('#huodong').click(function () {
   location.replace('index.html')
   })

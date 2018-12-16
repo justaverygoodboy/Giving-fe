@@ -6,7 +6,6 @@
   <meta name="format-datection" content="telephone=no,email=no"/>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="white">
-  <title>小树苗</title>
   <script src="lib/jquery-3.3.1.js"></script>
   <link rel="stylesheet" type="text/css" href="css/font.css">
   <style>
@@ -15,7 +14,7 @@
       padding: 0;
       display: flex;
       flex-direction: column;
-      background: url("./img/tree-grow.png");
+      background: url("./img/tree-grow@2x.png");
       background-position: 0 92.5vh;
       background-size: cover;
     }
@@ -116,7 +115,7 @@
     }
     @keyframes grow {
       0% {
-        background: url("./img/tree-grow.png");
+        background: url("./img/tree-grow@2x.png");
         background-position: 0 92.5vh;
         background-size: cover;
       }
@@ -125,8 +124,13 @@
         background-position: 0 92.5vh;
         background-size: cover;
       }
-      75% {
+      50% {
         background: url("./img/tree-grow3.jpg");
+        background-position: 0 92.5vh;
+        background-size: cover;
+      }
+      75% {
+        background: url("./img/tree-grow3.5.jpg");
         background-position: 0 92.5vh;
         background-size: cover;
       }
@@ -150,7 +154,7 @@
     我的小树苗
   </div>
   <div class="share">
-    <img src="./img/share@3x.png">
+    <img src="./img/share@2x.png">
   </div>
 </header>
 
@@ -171,7 +175,7 @@
       <img src="img/my-active@2x.png"/></div>
   </div>
 </footer>
-<body>
+</body>
 
 <script>
   $('#huodong').click(function () {
@@ -186,7 +190,7 @@
   $('.energy-container').click(function () {
     $('#num').html('50')
     $('.energy-container p').css({right:'15vw'})
-    $('body').css({animation:'grow 4s forwards'})
+    $('body').css({animation:'grow 3s forwards'})
   })
 </script>
 </body>
