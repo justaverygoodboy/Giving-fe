@@ -8,13 +8,14 @@
   <meta name="apple-mobile-web-app-capable" content="yes"><!-- 这个我也不知道... -->
   <meta name="apple-mobile-web-app-status-bar-style" content="white"><!-- 设置手机导航栏颜色 -->
   <link rel="icon" type="image/x-icon" href="img/favicon.ico"/><!--favicon load-->
+  <title>活动首页</title>
   <script src="lib/jquery-3.3.1.js"></script>
   <script src="js/article.js"></script>
   <link rel="stylesheet" href="css/article.css">
-
+  <link rel="stylesheet" href="css/font.css">
 <body>
   <header>
-    <a href="index.html"><img src="img\back-img.png" class="back-img"></a>
+    <div class="back"><img src="img\fanhui@2x.png" class="back-img">返回</div>
     <p>活动</p>
     <img src="img\share@2x.png" class="share-img">
   </header>
@@ -27,9 +28,13 @@
       <div class="time">ajax-时间</div>
     </div>
       <img src="img/star.png" class="star">
-      <img src="img/join.png" class="join">
+      <img src="img/join.png" class="join" onclick="join()">
 
   </div>
 </body>
+<script>
+  $('.back').click(function () {
+    location.replace("index.html")
+  })</script>
 
 </html>

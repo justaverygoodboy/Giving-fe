@@ -134,9 +134,6 @@
     <div></div>
   </div>
 <script>
-// $(document).ready(function () {
-//     var height = $('html')[0].clientHeight
-// })
   <!--动画区-->
   function animate(){
     setTimeout(function () {
@@ -158,8 +155,7 @@
   $('#login-button').click(function () {
     subUserControl()
   })
-  function subUser(username,password){
-    $.ajax({
+$.ajax({
       url:'https://os.ncuos.com/api/user/token',
       contentType:'application/json;charset=utf-8',
       method:'POST',
@@ -168,7 +164,7 @@
         password:password
       }),
       success:function(res){
-        token = res['token']
+        var token = res['token']
         $.ajax({
           url:"https://os.ncuos.com/api/user/profile/basic",
           contentType:"application/json; charset=utf-8",
@@ -177,7 +173,6 @@
             authorization:'passport '+token},
           success:
             function(res){
-              localStorage.setItem('username', res.base_info.xm)//store the name
               $.ajax({
                 url:"https://os.ncuos.com/api/user/profile/index",
                 contentType:"application/json; charset=utf-8",
@@ -187,22 +182,31 @@
                 success:
                   function(res){
                     localStorage.setItem('department',res.department)//store the department
-                    $('.bouncing-loader').show()
                     location.replace('index.html')
-
                   }
               })
             },
-          error:function(){
-            document.getElementById('tip').innerHTML='<span style="color: red">请输入正确的学号或密码</span>'
-            $('input').val('')
-            $('#tip').show()
-            $('#tip').fadeOut(1100)
-          }
+
         })
       }
     })
+  function subUser(username,password){
+    $.ajax({
+      url:'http://127.0.0.1:5000/api/token',
+      contentType:'application/json;charset=utf-8',
+      method:'POST',
+      data:JSON.stringify({
+        username:username,
+        password:password
+      }),
+      success:function(res){
+        if(res && res.token){
+          localStorage["token"] = res.token;
+        }
+        }
+    })
   }
+
 </script>
 </body>
 </html>
