@@ -1,29 +1,3 @@
-/*html {*/
-  /*font-size:16px;*/
-/*}*/
-/*@media screen and (min-width: 375px){*/
-/*@media screen and (min-width: 375px){*/
-/*@media screen and (min-width: 375px){*/
-  /*html {*/
-    /*font-size: calc(100% + 2 * (100vw - 375px) / 39);*/
-  /*}*/
-/*}*/
-/*@media screen and (min-width: 414px){*/
-  /*html {*/
-    /*font-size: calc(100% + 4 * (100vw - 414px) / 586);*/
-  /*}*/
-/*}*/
-/*@media screen and (min-width: 600px){*/
-  /*html {*/
-    /*font-size: calc(125% + 4 * (100vw - 600px) / 400);*/
-  /*}*/
-/*}*/
-/*@media screen and (min-width: 1000px){*/
-  /*html {*/
-    /*font-size: calc(137.5% + 6 * (100vw - 1000px) / 1000);*/
-  /*}*/
-/*}*/
-/*利用rem+vm方案解决移动适配*/
 
 * {
   margin: 0;
@@ -37,7 +11,6 @@ a ,a:active {
   color: black;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   -webkit-user-select: none;
-  -moz-user-focus: none;
   -moz-user-select: none;
 }
 input {
@@ -71,7 +44,6 @@ body {
 .header p {
   font-family: PingFangBold;
   font-size:  9.6vw;
-  font-weight: bold;
   padding-top: 3.16vw;
   position: absolute;
   margin-left: 4.4vw;
@@ -109,7 +81,7 @@ input::-webkit-input-placeholder{
 input {
   position: absolute;
   border: 0;
-  font-family: PingFangHeiti;
+  font-family: PingFangMedium;
   font-size: 4vw;
   color: white;
   height: 8vw;

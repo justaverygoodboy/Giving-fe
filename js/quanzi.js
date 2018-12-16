@@ -4,7 +4,6 @@ $(function() {
   var contentBlurred = $("<div></div>");
   $(contentBlurred).append(duplicate);
   $(contentBlurred).addClass('blur-content-header');
-  var translation;
   $(".header").append(contentBlurred);
 
   var firsttrans = $('.header').height()+$('.search').height()+50;
@@ -31,14 +30,12 @@ $(function() {
   var translation;
   $("footer").append(contentBlurred);
 
-  var firsttrans = ($(window).height()/100)*56+($('#banner').height());
-  var mg = ($(window).height()/100)*9.74;
+  var firsttrans = ($(window).height()/100)*151;
   var tr='translate3d(0,' + (firsttrans + 'px') + ',0)';
-  $(duplicate).css({"margin-bottom":mg,"-webkit-transform":tr,"-moz-transform":tr,"transform":tr,"-webkit-filter": 'blur(20px)'});
-
+  $(duplicate).css({"-webkit-transform":tr,"-moz-transform":tr,"transform":tr,"-webkit-filter": 'blur(5px)'});
   $(window).bind("scroll", function(){
-    var top = $(this).scrollTop(); // 当前窗口的滚动距离
+    var top = $(this).scrollTop();
     translation = 'translate3d(0,' + (firsttrans-top + 'px') + ',0)';
-    $(duplicate).css({"-webkit-transform":translation,"-moz-transform":translation,"transform":translation,"-webkit-filter": 'blur(20px)'});
+    $(duplicate).css({"-webkit-transform":translation,"-moz-transform":translation,"transform":translation,"-webkit-filter": 'blur(5px)'});
   })
 })
