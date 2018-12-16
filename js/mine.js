@@ -1,10 +1,27 @@
-$(document).ready(function(){
-  var username = window.localStorage.getItem('username')
-  var department = window.localStorage.getItem('department')
-  $('#username').html(username)
-  $('#department').html(department)
+$(document).ready(function () {
+  var department = localStorage["department"]
+  alert(department)
+  $("#department").html(department)
+  function mine() {
+    var token = localStorage["token"]
+    $.ajax({
+      type: 'GET',
+      url: 'http://127.0.0.1:5000/api/mine',
+      headers: {
+        'Content-Type': 'application/json;charset=utf-8',
+        'Authorization': 'passport ' + token
+      },
+      success: function (res) {
+        if (res.status == 1) {
+          $('#username').html(res.name)
+        } else {
+          alert("请求失败")
+        }
+      }
+    })
+  }
+mine()
 });
-
 $('#huodong').click(function () {
   location.replace("index.html")
 })
@@ -17,8 +34,7 @@ $('.doing').click(function () {
 $('.done').click(function () {
   location.replace('done-index.html')
 })
-$('.about-us').click(function () {
-})
+$('.about-us').click(function () {})
 $('#tree').click(function () {
   location.replace('tree.html')
 })

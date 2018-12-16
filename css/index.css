@@ -1,4 +1,3 @@
-
 * {
   margin: 0;
   padding: 0;
@@ -11,6 +10,7 @@ a ,a:active {
   color: black;
   -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
   -webkit-user-select: none;
+  -moz-user-focus: none;
   -moz-user-select: none;
 }
 input {
@@ -39,11 +39,11 @@ body {
   z-index: 5;
   padding-left: 3.16vw;
   overflow: hidden;
-
 }
 .header p {
   font-family: PingFangBold;
   font-size:  9.6vw;
+  font-weight: bold;
   padding-top: 3.16vw;
   position: absolute;
   margin-left: 4.4vw;
@@ -81,24 +81,25 @@ input::-webkit-input-placeholder{
 input {
   position: absolute;
   border: 0;
-  font-family: PingFangMedium;
+  font-family: PingFangHeiti;
   font-size: 4vw;
   color: white;
   height: 8vw;
-  width: 69vw;
+  width: 70vw;
   background: url("../img/search-bg@2x.png");
-  background-size: 500%;
   margin-top: 2.3vw;
   margin-left: 7vw;
 }
 input:focus {
   outline: none;
 }
+
 /*swiper*/
 #banner {
   width: 89.6vw;
   height: 42vw;
 }
+
 
 /*card*/
 
@@ -124,7 +125,7 @@ input:focus {
 
 /*foot*/
 footer {
-  border-top:1px solid rgb(198,208,207);
+  border-top:1px solid #8888;
   border-bottom: 10px;
   height: 13.34vw;
   width: 100%;
@@ -134,6 +135,7 @@ footer {
 
 }
 .footer-bar {
+  border-top: 1px solid #888888;
   border-bottom: 1px;
   height: 13.34vw;
   width: 100%;

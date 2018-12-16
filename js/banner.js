@@ -38,6 +38,7 @@
     //设置导航
     this.append("<div class='scrollBanner-icons'></div>");
     $.each(obj.images,function(index,item){
+
       //data-*属性是H5允许用户自行在HTML标签上保存数据的属性
       //保存在data-*中的数据，可以使用JS读取调用
       $(".scrollBanner-icons").append("<span class='scrollBanner-icon'data-index = '"+index+"'></span>")
